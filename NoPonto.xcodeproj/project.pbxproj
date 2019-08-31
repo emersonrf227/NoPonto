@@ -19,6 +19,7 @@
 		AC985F95231AA8C300463F8A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC985F94231AA8C300463F8A /* InterfaceController.swift */; };
 		AC985F97231AA8C300463F8A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC985F96231AA8C300463F8A /* ExtensionDelegate.swift */; };
 		AC985F99231AA8C400463F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC985F98231AA8C400463F8A /* Assets.xcassets */; };
+		AC985FA9231AB9A000463F8A /* MeatTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC985FA8231AB9A000463F8A /* MeatTemperature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		AC985F96231AA8C300463F8A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		AC985F98231AA8C400463F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC985F9A231AA8C400463F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC985FA8231AB9A000463F8A /* MeatTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatTemperature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				AC985F94231AA8C300463F8A /* InterfaceController.swift */,
+				AC985FA8231AB9A000463F8A /* MeatTemperature.swift */,
 				AC985F96231AA8C300463F8A /* ExtensionDelegate.swift */,
 				AC985F98231AA8C400463F8A /* Assets.xcassets */,
 				AC985F9A231AA8C400463F8A /* Info.plist */,
@@ -297,6 +300,7 @@
 			files = (
 				AC985F97231AA8C300463F8A /* ExtensionDelegate.swift in Sources */,
 				AC985F95231AA8C300463F8A /* InterfaceController.swift in Sources */,
+				AC985FA9231AB9A000463F8A /* MeatTemperature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

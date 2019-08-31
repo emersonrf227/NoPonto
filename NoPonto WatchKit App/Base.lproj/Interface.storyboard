@@ -1,14 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller spacing="10" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="NoPonto_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="kQy-KO-azA">
+                            <items>
+                                <timer alignment="center" id="Lqn-f2-dji">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                                <button width="1" alignment="left" title="Start Time" id="5CC-ji-Wvc">
+                                    <connections>
+                                        <action selector="onTimerButton" destination="AgC-eL-Hgc" id="v7J-oY-yGl"/>
+                                    </connections>
+                                </button>
+                                <label alignment="center" text="Total 0.5 Kg" id="zMK-5P-sbI"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="xDa-cO-OMj">
+                            <items>
+                                <group width="1" alignment="left" spacing="20" id="4XM-1W-D3k">
+                                    <items>
+                                        <button alignment="center" backgroundImage="minus" id="9cb-TV-BYH">
+                                            <connections>
+                                                <action selector="onMinusButton" destination="AgC-eL-Hgc" id="dtC-Tc-yrV"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="center" backgroundImage="plus" id="j1T-4r-KX2">
+                                            <connections>
+                                                <action selector="onPlusButton" destination="AgC-eL-Hgc" id="cma-NM-ORp"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <label alignment="left" text="Ponto da carne" id="Yix-3h-QMM"/>
+                                <slider width="1" alignment="left" maximum="3" steps="3" id="jSD-YW-Mfn">
+                                    <connections>
+                                        <action selector="onTempChange:" destination="AgC-eL-Hgc" id="in1-Yl-qAG"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="Nj2-J0-WbU">
+                            <items>
+                                <label alignment="center" text="Total (kg)" id="QuP-OS-L8Q"/>
+                                <picker height="55" alignment="left" focusStyle="stack" id="Eay-Nw-Mf9">
+                                    <connections>
+                                        <action selector="onWeightChange:" destination="AgC-eL-Hgc" id="Iv7-wc-XTZ"/>
+                                    </connections>
+                                </picker>
+                                <label alignment="center" text="Ponto da carne" id="mDV-Ve-y07"/>
+                                <picker height="60" alignment="left" focusStyle="stack" id="WMU-Pq-adf">
+                                    <connections>
+                                        <action selector="onTemperatureChanger:" destination="AgC-eL-Hgc" id="EMX-eG-8iu"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <switch width="1" alignment="left" title="Imagens" id="5Qs-Jq-0Ks">
+                            <connections>
+                                <action selector="onModeChanger:" destination="AgC-eL-Hgc" id="Ahb-U2-DAP"/>
+                            </connections>
+                        </switch>
+                    </items>
+                    <connections>
+                        <outlet property="cookLabel" destination="Yix-3h-QMM" id="pLO-Qj-MzZ"/>
+                        <outlet property="imageGroup" destination="Nj2-J0-WbU" id="MkP-aS-7U8"/>
+                        <outlet property="slider" destination="jSD-YW-Mfn" id="SCs-7a-Tx6"/>
+                        <outlet property="temperatureLabel" destination="mDV-Ve-y07" id="Fhi-wi-NbH"/>
+                        <outlet property="temperaturePicker" destination="WMU-Pq-adf" id="EDz-di-PNk"/>
+                        <outlet property="textGroup" destination="xDa-cO-OMj" id="Gcd-oF-ARO"/>
+                        <outlet property="timer" destination="Lqn-f2-dji" id="Juw-Yd-n7z"/>
+                        <outlet property="timerButton" destination="5CC-ji-Wvc" id="BH7-CZ-xkw"/>
+                        <outlet property="weightLabel" destination="zMK-5P-sbI" id="P8p-lU-j5M"/>
+                        <outlet property="weightPicker" destination="Eay-Nw-Mf9" id="8rQ-hf-YVl"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>
